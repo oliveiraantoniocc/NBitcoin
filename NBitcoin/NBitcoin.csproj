@@ -13,7 +13,7 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<Version Condition=" '$(Version)' == '' ">5.0.76</Version>
-		<LangVersion>8.0</LangVersion>
+		<LangVersion>latest</LangVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
 		<PublishRepositoryUrl>true</PublishRepositoryUrl>
@@ -22,6 +22,7 @@
 	<PropertyGroup>
 		<TargetFrameworks>net461;net452;netstandard1.3;netstandard1.1;netcoreapp2.1;netstandard2.1;netstandard2.0;net6.0</TargetFrameworks>
 		<TargetFrameworks Condition="'$(TargetFrameworkOverride)' != ''">$(TargetFrameworkOverride)</TargetFrameworks>
+    	<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">net6.0</TargetFrameworks>
 		<NoWarn>1591;1573;1572;1584;1570;3021</NoWarn>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 	</PropertyGroup>

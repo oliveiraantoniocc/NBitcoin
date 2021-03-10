@@ -3,6 +3,9 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFrameworks>netcoreapp3.1;net472;net6.0</TargetFrameworks>
+    <TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">net6.0</TargetFrameworks>
+    <TargetFrameworks Condition="'$(TargetFrameworkOverride)' != ''">$(TargetFrameworkOverride)</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>

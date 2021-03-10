@@ -4,13 +4,12 @@
     <Company>Metaco SA</Company>
     <Copyright>Copyright © Metaco SA 2017</Copyright>
     <Description>The C# Bitcoin Library</Description>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net461;net6.0</TargetFrameworks>
-    <TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <!--<StartupObject>NBitcoin.Tests.Program</StartupObject>-->
-    <!--<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true' And '$(MSBuildRuntimeType)' == 'Core' ">netcoreapp2.1</TargetFrameworks>-->
+    <TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">net6.0</TargetFrameworks>
     <!--<NoWarn>CS0618</NoWarn>-->
   </PropertyGroup>
   <PropertyGroup>

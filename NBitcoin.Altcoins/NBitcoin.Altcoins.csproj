@@ -12,8 +12,8 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<TargetFrameworks>net452;netstandard1.3;netstandard2.0;netstandard2.1;net6.0</TargetFrameworks>
-		<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">netstandard2.1</TargetFrameworks>
 		<TargetFrameworks Condition="'$(TargetFrameworkOverride)' != ''">$(TargetFrameworkOverride)</TargetFrameworks>
+		<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">net6.0</TargetFrameworks>
 		<NoWarn>1591;1573;1572;1584;1570;3021</NoWarn>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<Version>2.0.30</Version>
